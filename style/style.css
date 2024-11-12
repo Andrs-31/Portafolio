@@ -14,9 +14,6 @@ body {
   background-position: center center; 
 }
 
-
-
-
 /* Barra de navegación */
 header {
   background-color: #222;
@@ -200,3 +197,188 @@ footer {
   0% { transform: scale(0.5); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
+
+/* Media query para pantallas de hasta 768px (tablets y móviles) */
+@media (max-width: 768px) {
+  /* Ajustar el tamaño del header */
+  header {
+    padding: 1em;
+  }
+
+  header h1 {
+    font-size: 2em;
+  }
+
+  /* Convertir el menú en columna */
+  header nav ul {
+    flex-direction: column;
+    gap: 1em;
+  }
+
+  /* Ajuste de la sección "Hero" */
+  .hero {
+    padding: 1em;
+    height: 50vh; /* Ajustar la altura en móviles */
+  }
+
+  .hero h2 {
+    font-size: 1.8em;
+  }
+
+  /* Ajustar el texto de bienvenida y el botón */
+  .cta-btn {
+    padding: 0.6em 1em;
+    font-size: 1em;
+  }
+
+  /* Imagen de perfil */
+  .profile-pic {
+    width: 100px; /* Tamaño menor en móviles */
+  }
+
+  /* Ajuste de la sección de proyectos */
+  .project-grid {
+    flex-direction: column; /* Cambiar a columna en móvil */
+    gap: 1em;
+  }
+
+  .project {
+    width: 100%; /* Ocupa el ancho completo en móviles */
+  }
+
+  /* Ajustar las barras de habilidades */
+  .skills-bar {
+    max-width: 100%; /* Hacer que se ajuste al contenedor */
+  }
+
+  .progress-bar {
+    padding: 0.3em; /* Reducir padding de la barra en móviles */
+  }
+
+  /* Formulario de contacto */
+  #contactForm {
+    width: 90%; /* Reducir ancho en móviles */
+    padding: 0.5em;
+  }
+
+  /* Footer */
+  footer {
+    padding: 1em;
+  }
+
+  .social-links a img {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Media query para pantallas de hasta 480px (móviles pequeños) */
+@media (max-width: 480px) {
+  /* Reducir tamaño de texto */
+  header h1 {
+    font-size: 1.5em;
+  }
+
+  /* Ajustes específicos de la sección Hero */
+  .hero h2 {
+    font-size: 1.5em;
+  }
+
+  /* Reducir padding y márgenes de secciones */
+  .section {
+    padding: 2em 1em;
+  }
+
+  /* Tamaño más pequeño para la imagen de perfil */
+  .profile-pic {
+    width: 80px;
+  }
+
+  /* Texto más pequeño en las habilidades */
+  .skills-bar .skill p {
+    font-size: 0.9em;
+  }
+}
+
+/* Color del texto en el header */
+header h1 {
+  color: #ffffff; /* Cambia este color al que desees */
+}
+
+header p {
+  color: #ffffff;
+}
+
+header nav a {
+  color: #ffffff;
+}
+
+/* Color del texto en la sección Hero */
+.hero h2 {
+  color: #ffffff;
+}
+
+.hero p {
+  color: #ffffff;
+}
+
+.cta-btn {
+  color: #ffffff; /* Color del texto en el botón */
+  background-color: #007bff; /* Color de fondo del botón */
+}
+
+/* Color del texto en la sección Sobre mí */
+#sobre-mi h2 {
+  color: #ffffff;
+}
+
+#sobre-mi p {
+  color: #ffffff;
+}
+
+/* Color del texto en la sección Proyectos */
+#proyectos h2 {
+  color: #ffffff;
+}
+
+.project h3 {
+  color: #000000;
+}
+
+.project p {
+  color: #000000;
+}
+
+/* Color del texto en la sección Habilidades */
+#habilidades h2 {
+  color: #ffffff;
+}
+
+.skills-bar .skill p {
+  color: #ffffff;
+}
+
+/* Color del texto en la sección Contacto */
+#contacto h2 {
+  color: #ffffff;
+}
+
+#contactForm label {
+  color: #ffffff;
+}
+
+#contactForm input,
+#contactForm textarea {
+  color: #000000;
+}
+
+/* Color del texto en el footer */
+footer p {
+  color: #ffffff;
+}
+
+footer .social-links a {
+  color: #ffffff;
+}
+
+
