@@ -5,6 +5,10 @@
   font-family: 'Arial', sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 50px; /* Ajusta este valor según la altura de tu header fijo */
+}
 /* Agregar una imagen de fondo a toda la página */
 body {
   background-color: aqua;
@@ -18,7 +22,7 @@ body {
 header {
   background-color: #222;
   color: white;
-  padding: 2em;
+  padding: 1em; /* Reducido desde 2em a 1em */
   text-align: center;
   position: sticky;
   top: 0;
@@ -28,7 +32,7 @@ header {
 
 /* Barra de navegación con margen superior */
 header nav {
-  margin-top: 30px; /* Ajuste el valor para mover más abajo */
+  margin-top: 10px; /* Reducido desde 30px a 10px */
 }
 
 header nav ul {
@@ -53,6 +57,7 @@ header nav ul li a:hover {
 header nav ul li a.active {
   color: #4CAF50;
 }
+
 
 #contactForm {
   display: flex;
@@ -108,21 +113,40 @@ header nav ul li a.active {
 }
 
 .project-grid {
-  display: flex;
-  gap: 2em;
-  justify-content: center;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
 }
 
 .project {
-  width: 280px;
-  background-color: white;
-  padding: 1.5em;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s;
-  text-align: left;
+  background-color: #f0f0f0;
+  border-radius: 8px;
+  overflow: hidden;
+  width: 300px; /* Ajusta el ancho si es necesario */
+  height: 200px; /* Ajusta la altura del contenedor */
+  position: relative; /* Necesario para que el texto se posicione relativo al contenedor */
 }
+
+.project img {
+  width: 100%;
+  height: 100%; /* La imagen ocupa todo el espacio del contenedor */
+  object-fit: cover; /* Ajusta la imagen al tamaño del contenedor y recorta lo que sobresale */
+  display: block;
+}
+
+.project h3, .project p {
+  position: absolute; /* Coloca el texto sobre la imagen */
+  bottom: 0; /* Posiciona el texto en la parte inferior */
+  left: 0;
+  width: 100%;
+  background: rgba(235, 233, 233, 0.5); /* Fondo semitransparente para mejorar la legibilidad */
+  color: #0c2bda; /* Texto blanco para que contraste */
+  padding: 10px; /* Espaciado interno */
+  margin: 0;
+}
+
+
+
 
 .project:hover {
   transform: scale(1.05);
@@ -381,4 +405,32 @@ footer .social-links a {
   color: #ffffff;
 }
 
+/* Colores personalizados */
+.progress-bar.js {
+  background-color: #f7df1e; /* Amarillo de JavaScript */
+}
+
+.progress-bar.html-css {
+  background-color: #e34f26; /* Rojo para HTML & CSS */
+}
+
+.progress-bar.react {
+  background-color: #61dafb; /* Azul claro para React */
+}
+
+.progress-bar.node {
+  background-color: #68a063; /* Verde para Node.js */
+}
+
+.progress-bar.python {
+  background-color: #306998; /* Azul oscuro para Python */
+}
+
+.progress-bar.sql {
+  background-color: #00758f; /* Azul para SQL */
+}
+
+.progress-bar.git {
+  background-color: #f05033; /* Naranja para Git */
+}
 
